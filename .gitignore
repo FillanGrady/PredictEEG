@@ -1,0 +1,4 @@
+*.edf
+*summary.txt
+*.pyc
+.idea/*
