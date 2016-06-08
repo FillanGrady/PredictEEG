@@ -117,7 +117,7 @@ class NextEEG:
                                  (self.patient_number, self.seizure_information[self.file_index].patient_recording)
             raw = mne.io.read_raw_edf(next_eeg_file_path)
         except IOError as e:
-            print e
+            print(e)
             raise IOError("Download missing file")
         self.data, self.times = raw[:, :]
         self.times = np.array(self.times)
@@ -196,7 +196,7 @@ def get_seizure_information(patient_number):
                     found_file = False
                     recording_number = -1
 
-    print "%s eeg files for patient %s" % (len(seizure_information), patient_number)
+    print("%s eeg files for patient %s" % (len(seizure_information), patient_number))
 
     #  Rearranges the times so that they start at time = 0, and to properly account for days passing
     start_recording = seizure_information[0].start_time

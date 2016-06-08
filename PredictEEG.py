@@ -78,4 +78,4 @@ if __name__ == '__main__':
             sess.run(optimizer, feed_dict={x: eeg_data, y: time_until})
             if i % display_step == 0:
                 acc = sess.run(accuracy, feed_dict={x: eeg_data, y: time_until})
-                print "Iter: %.0f, Accuracy: %.4f" % (i, acc)
+                print("Iter: %.0f, Accuracy: %.4f" % (i, acc))
